@@ -148,7 +148,7 @@ export class RenameManager {
       if (node.editsDefinitions) {
         node.editsDefinitions.forEach(ed => (ed.type = newName));
       }
-      this.eventBus.publish(DiagramEvents.NodeChanged);
+      this.eventBus.publish(DiagramEvents.NodeChanged, node);
       this.eventBus.publish(DiagramEvents.RenderRequested);
     }
 

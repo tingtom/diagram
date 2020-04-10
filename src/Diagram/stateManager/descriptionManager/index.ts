@@ -127,7 +127,7 @@ export class DescriptionManager {
         descriptionObjectContent !== this.DESCRIPTION_PLACEHOLDER
       ) {
         this.selectedNode.description = descriptionObjectContent;
-        this.eventBus.publish(DiagramEvents.NodeChanged);
+        this.eventBus.publish(DiagramEvents.NodeChanged, this.selectedNode);
       }
     }
   };
